@@ -19,3 +19,12 @@ def count_letters(text_to_count):
         #print(letter_dict)
     return letter_dict
 
+def sort_on(dictionary):
+    return dictionary["num"]
+
+def sort_dictionary(dictionary):
+    sorted_list = []
+    for key in dictionary:
+        sorted_list.append({"char": key, "num" : dictionary[key]})
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
